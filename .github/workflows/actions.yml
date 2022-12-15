@@ -12,7 +12,7 @@ jobs:
         with:
           who-to-greet: 'everyone'
       - name: print time
-        run: echo "${{stpes.hellow.outputs.time}}"
+        run: echo "${{steps.hellow.outputs.time}}"
          
               
 
