@@ -1,0 +1,20 @@
+on: [push]
+jobs:
+  greet: 
+    runs-on: ubuntu-latest
+    name: jobs-to-greet
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v3
+      - name: greet
+        uses: ./
+        id: hellow
+        with:
+          who-to-greet: 'everyone'
+      - name: print time
+        run: echo "${{stpes.hellow.outputs.time}}"
+         
+              
+
+
+        
